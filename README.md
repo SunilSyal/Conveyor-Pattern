@@ -12,3 +12,5 @@ rest all will be ignored.
 Refer the following flowchart to easily understand the pattern.
 
 https://raw.githubusercontent.com/SunilSyal/Conveyor-Pattern/master/CP.jpg
+
+Plan for next version: Cater the asynchronous calls inside a step.
