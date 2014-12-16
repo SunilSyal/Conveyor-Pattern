@@ -68,8 +68,6 @@ and reverse indexing. */
 
   trace("Process length is: "+ processLen +"<br>")
   
-  var activityLength = processOrder.length;
-
   // Define the steps here.
 
   PROCESS.step_1 = function() {
@@ -105,8 +103,8 @@ and reverse indexing. */
 
   function fnRunOrWait(stepName, args) {
     var myIndex = quickRefObjArr[stepName].index,
-      prevStepState = quickRefObjArr[myIndex - 1];
-    var bool = fnMarkReady(stepName, args);
+      prevStepState = quickRefObjArr[myIndex - 1],
+      bool = fnMarkReady(stepName, args);
     if (bool && (myIndex == 0 || (prevStepState == 0 && myIndex > 0))) {
       fnExecute(stepName)
     }
@@ -128,8 +126,8 @@ and reverse indexing. */
 
 /* Function fnExecute executes a step and informs the next step*/ 
   function fnExecute(stepName) {
-    var myIndex = quickRefObjArr[stepName].index;
-    var myArgs = quickRefObjArr[stepName].myArgs;
+    var myIndex = quickRefObjArr[stepName].index,
+      myArgs = quickRefObjArr[stepName].myArgs;
     PROCESS[stepName].apply(PROCESS, myArgs);
     quickRefObjArr[myIndex]--;
     quickRefObjArr[stepName].status = "green";
