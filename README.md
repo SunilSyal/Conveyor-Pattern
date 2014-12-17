@@ -1,6 +1,8 @@
 Conveyor-Pattern
 ================
 
+Demo - http://plnkr.co/edit/wNECYpL9Ze9VmCwatK9C?p=preview
+
 This design pattern is created to cater the requirement where processes/steps are supposed to be 
 executed in an order - just like product moving on a conveyor belt and different departments 
 execute their part as and when the product reaches to corresponding department. There may be some steps
